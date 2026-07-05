@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="韩思潭的 GitHub 个人网站，展示可信人工智能、大语言模型安全与软件工程项目。"
+    />
+    <title>韩思潭 | GitHub 个人网站</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="返回首页">
+        <span class="brand-mark">H</span>
+        <span>韩思潭</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#projects">项目</a>
+        <a href="#focus">方向</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="切换主题">
+        <i data-lucide="moon"></i>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">Trustworthy AI / LLM Security / Software Engineering</p>
+          <h1>你好，我是韩思潭，关注可信人工智能与大语言模型安全。</h1>
+          <p class="hero-text">
+            本科就读于中山大学软件工程专业，项目经历集中在提示泄露攻击、代码隐私保护与工程化系统实现。
+          </p>
+          <div class="hero-actions" aria-label="主要链接">
+            <a class="primary-link" href="#projects">
+              <i data-lucide="sparkles"></i>
+              查看项目
+            </a>
+            <a class="secondary-link" href="https://github.com/anisnock" target="_blank" rel="noreferrer">
+              <i data-lucide="github"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <aside class="profile-panel" aria-label="个人概览">
+          <img class="avatar" src="assets/profile-card.svg" alt="抽象风格个人头像" />
+          <div class="profile-meta">
+            <span>当前方向</span>
+            <strong>Embodied AI</strong>
+          </div>
+          <div class="profile-stats">
+            <div>
+              <strong>3</strong>
+              <span>代表项目</span>
+            </div>
+            <div>
+              <strong>ISSRE</strong>
+              <span>2026 Accepted</span>
+            </div>
+            <div>
+              <strong>SYSU</strong>
+              <span>软件工程</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section intro-band" aria-label="个人简介">
+        <p>
+          我的项目从大模型安全风险出发，延伸到隐私保护与可部署系统，希望把研究问题转化为可复现、可评估、可落地的实现。
+        </p>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Projects</p>
+          <h2>代表项目</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-icon"><i data-lucide="shield-alert"></i></div>
+            <h3>针对大型语言模型的提示泄露攻击</h3>
+            <p>面向 LLM 系统提示泄露风险，提出提示模板优化与后缀优化两类攻击方法，结合结构跳跃采样与候选包含对比机制生成高质量对抗输入。</p>
+            <p class="project-note">论文已被 ISSRE 2026 接收。本人担任组长与核心成员，负责核心算法、攻击评估流程，以及 Methodology 和 Experiments 主要撰写。</p>
+            <a href="mailto:hanst@mail2.sysu.edu.cn?subject=Prompt%20Leakage%20Attack%20Project">了解项目</a>
+          </article>
+          <article class="project-card">
+            <div class="project-icon"><i data-lucide="file-lock-2"></i></div>
+            <h3>面向大模型的细粒度代码脱敏方法 PiCo</h3>
+            <p>针对云端大语言模型处理代码时的隐私泄露问题，设计以用户提示为导向的代码语义脱敏框架，利用本地小语言模型构建标识符白名单。</p>
+            <p class="project-note">参与框架设计与优化，负责代码标识符提取、关键词匹配模块、Stack Overflow 数据集处理、实验评估与技术文档。</p>
+            <a href="mailto:hanst@mail2.sysu.edu.cn?subject=PiCo%20Project">了解项目</a>
+          </article>
+          <article class="project-card">
+            <div class="project-icon"><i data-lucide="map"></i></div>
+            <h3>中山大学珠海校区全景导览程序</h3>
+            <p>基于 Go、Gin、MySQL 与 Redis 开发虚拟校园导览系统，支持 360 度全景展示、交互式地图导航与用户留言等功能。</p>
+            <p class="project-note">作为后端负责人，主导系统架构设计和技术选型，实现用户认证、留言系统、场景切换、测试体系与 API 文档。</p>
+            <a href="mailto:hanst@mail2.sysu.edu.cn?subject=Campus%20Panorama%20Guide%20Project">了解项目</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="focus">
+        <div class="section-heading">
+          <p class="eyebrow">Research Focus</p>
+          <h2>研究兴趣</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>2022 - 2025</span>
+            <h3>可信人工智能</h3>
+            <p>关注 AI 安全、鲁棒性、可解释性与可靠评估，尤其是大语言模型系统中的安全风险。</p>
+          </article>
+          <article>
+            <span>2025 - Present</span>
+            <h3>具身智能</h3>
+            <p>关注 embodied AI、智能体决策、视觉语言模型与真实环境交互中的可靠性问题。</p>
+          </article>
+          <article>
+            <span>Engineering</span>
+            <h3>工程实现</h3>
+            <p>熟悉 Python、Go、Gin、MySQL、Redis、LLM 推理部署与实验评估流程。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>欢迎交流大模型安全、可信 AI 与具身智能相关问题。</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="primary-link" href="mailto:hanst@mail2.sysu.edu.cn">
+            <i data-lucide="mail"></i>
+            发邮件
+          </a>
+          <button class="secondary-link copy-button" type="button" data-copy="hanst@mail2.sysu.edu.cn">
+            <i data-lucide="copy"></i>
+            复制邮箱
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 韩思潭</span>
+      <span>Built for GitHub Pages</span>
+    </footer>
+  </body>
+</html>
